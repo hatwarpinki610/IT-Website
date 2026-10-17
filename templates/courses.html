@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Branch Subjects | Priyadarshini College</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4fbff;
+            color: #123f70;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            background: #063b67;
+            padding: 12px 6%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .brand h1 {
+            color: white;
+            font-size: 18px;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #62efff;
+        }
+
+
+        /* =====================================================
+           COMPACT HERO
+        ===================================================== */
+
+        .hero {
+            max-width: 1400px;
+            margin: 0 auto;
+
+            padding: 28px 5%;
+
+            display: grid;
+            grid-template-columns: 48% 52%;
+
+            align-items: center;
+
+            gap: 35px;
+
+            min-height: 310px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f8ff,
+                    #e0f9fb
+                );
+
+            border-radius: 0 0 25px 25px;
+        }
+
+
+        /* IMAGE */
+
+        .hero-image {
+            height: 260px;
+            width: 100%;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            box-shadow:
+                0 12px 30px rgba(0, 50, 90, 0.18);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 40, 70, 0.45),
+                    transparent 55%
+                );
+        }
+
+
+        /* HERO TEXT */
+
+        .hero-content {
+            padding: 10px 10px 10px 0;
+        }
+
+        .breadcrumb {
+            font-size: 13px;
+            margin-bottom: 12px;
+            color: #62809a;
+        }
+
+        .breadcrumb a {
+            color: #0787a4;
+            font-weight: bold;
+        }
+
+        .hero-content h2 {
+            font-size: 43px;
+            line-height: 1.1;
+            margin-bottom: 14px;
+            color: #123f70;
+        }
+
+        .hero-content h2 span {
+            color: #0db5c7;
+        }
+
+        .hero-content p {
+            max-width: 570px;
+
+            color: #52718c;
+
+            font-size: 15px;
+
+            line-height: 1.65;
+
+            margin-bottom: 17px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+
+            background: white;
+
+            color: #087fae;
+
+            padding: 9px 16px;
+
+            border-radius: 25px;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            box-shadow:
+                0 5px 15px rgba(0, 50, 90, 0.10);
+        }
+
+
+        /* =====================================================
+           SUBJECT SECTION
+        ===================================================== */
+
+        .subjects {
+            padding: 55px 6%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            margin-bottom: 8px;
+            color: #123f70;
+        }
+
+        .section-heading h2 span {
+            color: #0db5c7;
+        }
+
+        .section-heading p {
+            color: #66819a;
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           SUBJECT CARDS
+        ===================================================== */
+
+        .subject-grid {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .subject-card {
+            background: white;
+
+            border-radius: 17px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 7px 22px rgba(0, 50, 90, 0.08);
+
+            transition: 0.3s ease;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 32px rgba(0, 50, 90, 0.15);
+        }
+
+
+        /* CARD IMAGE */
+
+        .card-image {
+            height: 145px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.5s ease;
+        }
+
+        .subject-card:hover .card-image img {
+            transform: scale(1.08);
+        }
+
+
+        .number {
+            position: absolute;
+
+            top: 10px;
+            left: 10px;
+
+            width: 34px;
+            height: 34px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.94);
+
+            color: #087fae;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .card-icon {
+            position: absolute;
+
+            right: 10px;
+            bottom: 10px;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 11px;
+
+            background: rgba(255, 255, 255, 0.95);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 19px;
+        }
+
+
+        /* CARD CONTENT */
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card-content h3 {
+            color: #123f70;
+
+            font-size: 17px;
+
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            color: #68839a;
+
+            font-size: 13px;
+
+            line-height: 1.55;
+
+            min-height: 62px;
+        }
+
+        .learn {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            color: #078da7;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           BOTTOM BANNER
+        ===================================================== */
+
+        .info-section {
+            padding: 10px 6% 55px;
+        }
+
+        .info-banner {
+            max-width: 1100px;
+
+            margin: auto;
+
+            min-height: 170px;
+
+            padding: 30px 40px;
+
+            border-radius: 22px;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #063b67,
+                    #0797aa
+                );
+
+            box-shadow:
+                0 12px 30px rgba(0, 50, 90, 0.15);
+        }
+
+        .info-banner h2 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        .info-banner p {
+            color: #d9f7ff;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .info-icon {
+            font-size: 65px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #063b67;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            font-size: 19px;
+            margin-bottom: 7px;
+        }
+
+        footer p {
+            color: #cce7f3;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 20px;
+
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: #62efff;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .subject-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content h2 {
+                font-size: 38px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 750px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 13px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 22px 18px 30px;
+
+                gap: 22px;
+            }
+
+            .hero-image {
+                height: 220px;
+                order: 1;
+            }
+
+            .hero-content {
+                order: 2;
+                padding: 0 5px;
+                text-align: center;
+            }
+
+            .hero-content h2 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .subjects {
+                padding: 45px 5%;
+            }
+
+            .subject-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-banner {
+                text-align: center;
+                flex-direction: column;
+                padding: 28px 22px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 450px) {
+
+            .brand h1 {
+                font-size: 15px;
+            }
+
+            .brand img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero-image {
+                height: 190px;
+            }
+
+            .hero-content h2 {
+                font-size: 31px;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <img
+                src="college-logo.png"
+                alt="Priyadarshini College Logo"
+            >
+
+            <h1>
+                Priyadarshini College
+                <br>
+                IT Department
+            </h1>
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="labs.html">
+                    Labs
+                </a>
+            </li>
+
+            <li>
+                <a href="courses.html" class="active">
+                    Subjects
+                </a>
+            </li>
+
+            <li>
+                <a href="faculty.html">
+                    Faculty
+                </a>
+            </li>
+
+            <li>
+                <a href="placement.htm">
+                    Placement
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         COMPACT HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+
+        <!-- IMAGE HALF -->
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1000&q=85"
+                alt="IT Books and Study"
+            >
+
+        </div>
+
+
+        <!-- TEXT HALF -->
+
+        <div class="hero-content">
+
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                &nbsp; › &nbsp;
+
+                IT Branch Subjects
+
+            </div>
+
+
+            <h2>
+
+                IT Branch
+                <span>Subjects</span>
+
+            </h2>
+
+
+            <p>
+
+                Explore the subjects offered by the
+                Information Technology Department and
+                develop strong technical, programming,
+                analytical and professional skills.
+
+            </p>
+
+
+            <div class="hero-badge">
+
+                📚 Learn • Practice • Innovate • Build
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUBJECTS
+    ===================================================== -->
+
+    <section class="subjects">
+
+
+        <div class="section-heading">
+
+            <h2>
+
+                Explore
+                <span>Subjects</span>
+
+            </h2>
+
+
+            <p>
+
+                Build your knowledge through core
+                Information Technology subjects.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="subject-grid">
+
+
+            <!-- FCIP -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+                        alt="Computer Programming"
+                    >
+
+                    <div class="number">
+                        01
+                    </div>
+
+                    <div class="card-icon">
+                        💻
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        FCIP
+                    </h3>
+
+                    <p>
+                        Build fundamental computer and
+                        programming knowledge with practical
+                        problem-solving skills.
+                    </p>
+
+                    <span class="learn">
+                        Fundamental Computing →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATA STRUCTURES -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+                        alt="Data Structures Programming"
+                    >
+
+                    <div class="number">
+                        02
+                    </div>
+
+                    <div class="card-icon">
+                        🌳
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Data Structures
+                    </h3>
+
+                    <p>
+                        Learn arrays, linked lists, stacks,
+                        queues, trees, graphs and algorithms.
+                    </p>
+
+                    <span class="learn">
+                        Algorithms & Logic →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WEB TECHNOLOGY -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                        alt="Web Technology"
+                    >
+
+                    <div class="number">
+                        03
+                    </div>
+
+                    <div class="card-icon">
+                        🌐
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Web Technology
+                    </h3>
+
+                    <p>
+                        Explore HTML, CSS, JavaScript and
+                        modern web development concepts.
+                    </p>
+
+                    <span class="learn">
+                        Web Development →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPUTER ARCHITECTURE -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80"
+                        alt="Computer Architecture"
+                    >
+
+                    <div class="number">
+                        04
+                    </div>
+
+                    <div class="card-icon">
+                        ⚙️
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Computer Architecture
+                    </h3>
+
+                    <p>
+                        Understand processors, memory,
+                        hardware and computer organization.
+                    </p>
+
+                    <span class="learn">
+                        Computer Systems →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROBABILITY -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=700&q=80"
+                        alt="Probability and Statistics"
+                    >
+
+                    <div class="number">
+                        05
+                    </div>
+
+                    <div class="card-icon">
+                        📊
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Probability & Statistics
+                    </h3>
+
+                    <p>
+                        Develop analytical skills through
+                        probability, statistics and data analysis.
+                    </p>
+
+                    <span class="learn">
+                        Data & Analysis →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DIGITAL ECONOMY -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=80"
+                        alt="Digital Economy and Management"
+                    >
+
+                    <div class="number">
+                        06
+                    </div>
+
+                    <div class="card-icon">
+                        📈
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Digital Economy & Management
+                    </h3>
+
+                    <p>
+                        Understand digital business,
+                        management and technology-driven
+                        environments.
+                    </p>
+
+                    <span class="learn">
+                        Digital Business →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROFESSIONAL COMMUNICATION -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=700&q=80"
+                        alt="Professional Communication"
+                    >
+
+                    <div class="number">
+                        07
+                    </div>
+
+                    <div class="card-icon">
+                        🎤
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Professional Communication
+                    </h3>
+
+                    <p>
+                        Improve communication, presentation,
+                        teamwork and professional skills.
+                    </p>
+
+                    <span class="learn">
+                        Communication Skills →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- OPEN ELECTIVE -->
+
+            <div class="subject-card">
+
+                <div class="card-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80"
+                        alt="Technology and Innovation"
+                    >
+
+                    <div class="number">
+                        08
+                    </div>
+
+                    <div class="card-icon">
+                        🚀
+                    </div>
+
+                </div>
+
+
+                <div class="card-content">
+
+                    <h3>
+                        Open Elective
+                    </h3>
+
+                    <p>
+                        Explore additional technology areas
+                        and interdisciplinary learning.
+                    </p>
+
+                    <span class="learn">
+                        Explore More →
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BOTTOM BANNER
+    ===================================================== -->
+
+    <section class="info-section">
+
+
+        <div class="info-banner">
+
+
+            <div>
+
+                <h2>
+                    Learn. Practice. Create. 🚀
+                </h2>
+
+                <p>
+                    Turn classroom knowledge into practical
+                    skills through projects, laboratories
+                    and continuous learning.
+                </p>
+
+            </div>
+
+
+            <div class="info-icon">
+                👨‍💻
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+
+        <h3>
+            Priyadarshini College of Engineering
+        </h3>
+
+
+        <p>
+            Information Technology Department
+        </p>
+
+
+        <p>
+            Nagpur, Maharashtra
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="labs.html">
+                Labs
+            </a>
+
+            <a href="courses.html">
+                Subjects
+            </a>
+
+            <a href="faculty.html">
+                Faculty
+            </a>
+
+            <a href="placement.htm">
+                Placement
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Priyadarshini College of Engineering.
+            All Rights Reserved.
+        </p>
+
+
+    </footer>
+
+
+</body>
+</html>

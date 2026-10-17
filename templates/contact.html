@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Priyadarshini College of Engineering</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef8fc;
+            color: #123f70;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+            min-height: 72px;
+
+            background: #063b70;
+
+            display: flex;
+            align-items: center;
+
+            padding: 7px 4%;
+
+            color: white;
+
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.20);
+
+            position: relative;
+            z-index: 10;
+        }
+
+
+        .logo {
+            width: 56px;
+            height: 56px;
+
+            background: white;
+
+            border: 3px solid #18d5e3;
+
+            border-radius: 13px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            flex-shrink: 0;
+
+            margin-right: 13px;
+        }
+
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+        .college-name {
+            flex: 1;
+        }
+
+
+        .college-name h1 {
+            font-size: 22px;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+
+
+        .college-name span {
+            color: #19d5e3;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+        .nav a {
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+
+            padding: 25px 0 20px;
+
+            border-bottom: 3px solid transparent;
+
+            transition: 0.25s;
+        }
+
+
+        .nav a:hover {
+            color: #1bd9e5;
+
+            border-bottom-color: #1bd9e5;
+        }
+
+
+        .nav .active {
+            color: #1bd9e5;
+
+            border-bottom-color: #1bd9e5;
+        }
+
+
+        .apply-btn {
+            background: #12c9dc !important;
+
+            padding: 10px 18px !important;
+
+            border-radius: 8px;
+
+            border: none !important;
+        }
+
+
+        .apply-btn:hover {
+            background: white !important;
+
+            color: #063b70 !important;
+        }
+
+
+        /* =====================================================
+           CONTACT HERO
+        ===================================================== */
+
+        .contact-hero {
+            min-height: 310px;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 50, 95, 0.94),
+                    rgba(3, 75, 120, 0.78),
+                    rgba(3, 75, 120, 0.42)
+                ),
+                url("/college-image");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        .contact-hero-content {
+            width: 1200px;
+
+            max-width: 92%;
+
+            margin: auto;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 50px 0;
+        }
+
+
+        .contact-label {
+            color: #20d7e5;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .contact-hero h2 {
+            font-size: 55px;
+
+            line-height: 1.05;
+
+            margin-bottom: 14px;
+
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .contact-hero p {
+            max-width: 780px;
+
+            margin: auto;
+
+            color: #f0fbff;
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+        .hero-contact-buttons {
+            margin-top: 20px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .hero-contact-buttons a {
+            background: white;
+
+            color: #063b70;
+
+            padding: 10px 18px;
+
+            border-radius: 9px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+            transition: 0.25s;
+        }
+
+
+        .hero-contact-buttons a:hover {
+            background: #18d5e3;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .container {
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 0 25px;
+        }
+
+
+        /* =====================================================
+           HOD SECTION
+        ===================================================== */
+
+        .hod-section {
+            background: white;
+
+            margin-top: -8px;
+
+            position: relative;
+
+            z-index: 3;
+
+            padding: 28px 35px;
+
+            border-radius: 0 0 14px 14px;
+
+            box-shadow: 0 8px 24px rgba(0, 60, 100, 0.08);
+        }
+
+
+        .section-title {
+            color: #063b70;
+
+            font-size: 32px;
+
+            margin-bottom: 22px;
+
+            text-align: center;
+        }
+
+
+        .section-title span {
+            color: #0dbdce;
+        }
+
+
+        .section-title::after {
+            content: "";
+
+            display: block;
+
+            width: 65px;
+
+            height: 3px;
+
+            background: #13c8d8;
+
+            margin: 10px auto 0;
+        }
+
+
+        .hod-card {
+            display: grid;
+
+            grid-template-columns: 150px 1fr auto;
+
+            align-items: center;
+
+            gap: 25px;
+        }
+
+
+        .hod-photo {
+            width: 135px;
+
+            height: 135px;
+
+            border-radius: 50%;
+
+            border: 4px solid #1382bd;
+
+            background: #f0f7fb;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            color: #6b8092;
+
+            font-size: 13px;
+
+            text-align: center;
+        }
+
+
+        .hod-photo img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .hod-details h3 {
+            color: #063b70;
+
+            font-size: 26px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .hod-role {
+            color: #405d75;
+
+            font-size: 15px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .hod-info-row {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px 20px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .hod-info {
+            color: #405d75;
+
+            font-size: 14px;
+        }
+
+
+        .hod-info strong {
+            color: #063b70;
+        }
+
+
+        .hod-button {
+            display: inline-block;
+
+            background: #12bfd0;
+
+            color: white;
+
+            padding: 11px 20px;
+
+            border-radius: 23px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .hod-button:hover {
+            background: #063b70;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           CONTACT INFORMATION GRID
+        ===================================================== */
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: 1.4fr 1fr;
+
+            gap: 22px;
+
+            margin: 25px auto 0;
+        }
+
+
+        /* =====================================================
+           ADDRESS CARD
+        ===================================================== */
+
+        .address-card {
+            background: linear-gradient(
+                145deg,
+                #dcecff,
+                #c9def8
+            );
+
+            border-radius: 15px;
+
+            padding: 28px;
+
+            box-shadow: 0 7px 22px rgba(0, 50, 90, 0.09);
+
+            border: 1px solid #d1e3f2;
+        }
+
+
+        .card-title {
+            color: #063b70;
+
+            font-size: 28px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .address-box {
+            border: 2px solid #22639b;
+
+            border-radius: 9px;
+
+            padding: 14px;
+
+            color: #173f63;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+
+        .detail-list {
+            margin-top: 16px;
+
+            display: grid;
+
+            gap: 12px;
+        }
+
+
+        .detail-item {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            color: #234c6d;
+
+            font-size: 14px;
+        }
+
+
+        .detail-icon {
+            width: 27px;
+
+            height: 27px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #086ba5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-shrink: 0;
+        }
+
+
+        /* =====================================================
+           GET IN TOUCH
+        ===================================================== */
+
+        .contact-card {
+            background: white;
+
+            border-radius: 15px;
+
+            padding: 28px;
+
+            box-shadow: 0 7px 22px rgba(0, 50, 90, 0.09);
+
+            border: 1px solid #e0edf3;
+        }
+
+
+        .contact-card h3 {
+            color: #063b70;
+
+            font-size: 22px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .contact-option {
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            padding: 14px;
+
+            background: #f5fbfe;
+
+            border-radius: 10px;
+
+            margin-bottom: 12px;
+
+            border: 1px solid #e0edf3;
+        }
+
+
+        .contact-option-icon {
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: #dff7fb;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 21px;
+        }
+
+
+        .contact-option strong {
+            display: block;
+
+            color: #063b70;
+
+            font-size: 14px;
+
+            margin-bottom: 3px;
+        }
+
+
+        .contact-option span,
+        .contact-option a {
+            color: #637d92;
+
+            font-size: 13px;
+
+            text-decoration: none;
+        }
+
+
+        .contact-option a:hover {
+            color: #08aabd;
+        }
+
+
+        /* =====================================================
+           VISIT SECTION
+        ===================================================== */
+
+        .visit-section {
+            margin: 25px 0 50px;
+
+            background: #063b70;
+
+            border-radius: 16px;
+
+            padding: 30px;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .visit-section h2 {
+            font-size: 28px;
+
+            margin-bottom: 9px;
+        }
+
+
+        .visit-section h2 span {
+            color: #18d5e3;
+        }
+
+
+        .visit-section p {
+            color: #d8edf6;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            max-width: 700px;
+
+            margin: 0 auto 20px;
+        }
+
+
+        .visit-button {
+            display: inline-block;
+
+            background: #16cbdc;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 23px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+
+        .visit-button:hover {
+            background: white;
+
+            color: #063b70;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #063b70;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+
+        footer h3 {
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+
+        footer span {
+            color: #18d5e3;
+
+            font-weight: bold;
+        }
+
+
+        footer p {
+            color: #c5dce8;
+
+            font-size: 13px;
+
+            margin-top: 7px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 1000px) {
+
+            .nav {
+                gap: 14px;
+            }
+
+
+            .nav a {
+                font-size: 12px;
+            }
+
+
+            .contact-hero h2 {
+                font-size: 46px;
+            }
+
+
+            .hod-card {
+                grid-template-columns: 130px 1fr;
+            }
+
+
+            .hod-button {
+                grid-column: 2;
+
+                justify-self: start;
+            }
+
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width: 700px) {
+
+            .navbar {
+                flex-wrap: wrap;
+
+                padding: 10px 18px;
+            }
+
+
+            .college-name h1 {
+                font-size: 17px;
+
+                white-space: normal;
+            }
+
+
+            .nav {
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+                margin-top: 8px;
+
+                gap: 15px;
+            }
+
+
+            .nav a {
+                padding: 8px 0;
+            }
+
+
+            .contact-hero {
+                min-height: 390px;
+            }
+
+
+            .contact-hero h2 {
+                font-size: 38px;
+            }
+
+
+            .contact-hero p {
+                font-size: 15px;
+            }
+
+
+            .container {
+                padding: 0 18px;
+            }
+
+
+            .hod-section {
+                padding: 25px 18px;
+            }
+
+
+            .section-title {
+                font-size: 26px;
+            }
+
+
+            .hod-card {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+
+            .hod-photo {
+                margin: auto;
+            }
+
+
+            .hod-info-row {
+                justify-content: center;
+            }
+
+
+            .hod-button {
+                grid-column: auto;
+
+                justify-self: center;
+            }
+
+
+            .card-title {
+                font-size: 24px;
+            }
+
+
+            .address-card,
+            .contact-card {
+                padding: 22px;
+            }
+
+
+            .visit-section {
+                padding: 28px 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img
+            src="/college-logo.png"
+            alt="Priyadarshini College Logo">
+
+    </div>
+
+
+    <div class="college-name">
+
+        <h1>
+            Priyadarshini College of Engineering
+        </h1>
+
+        <span>
+            Nagpur
+        </span>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/labs">
+            Labs
+        </a>
+
+        <a href="/courses">
+            Courses
+        </a>
+
+        <a href="/faculty">
+            Faculty
+        </a>
+
+        <a href="/placement">
+            Placements
+        </a>
+
+        <a href="/contact" class="active">
+            Contact
+        </a>
+
+        <a href="#" class="apply-btn">
+            Apply Now →
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+
+<section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+        <div class="contact-label">
+            CONNECT &nbsp; | &nbsp; ASK &nbsp; | &nbsp; VISIT
+        </div>
+
+
+        <h2>
+            Contact Us
+        </h2>
+
+
+        <p>
+            We're here to help. Reach out to the Department
+            of Information Technology for any queries.
+        </p>
+
+
+        <div class="hero-contact-buttons">
+
+            <a href="tel:+919423677790">
+                ☎ &nbsp; Contact Department
+            </a>
+
+
+            <a href="#address">
+                📍 &nbsp; Nagpur, Maharashtra
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main class="container">
+
+
+
+<!-- =====================================================
+     HOD SECTION
+===================================================== -->
+
+<section class="hod-section">
+
+    <h2 class="section-title">
+
+        Head of Department —
+        <span>Information Technology</span>
+
+    </h2>
+
+
+    <div class="hod-card">
+
+
+        <div class="hod-photo">
+
+            <span>
+                HOD<br>
+                PHOTO
+            </span>
+
+        </div>
+
+
+
+        <div class="hod-details">
+
+            <h3>
+                Dr. Prakash S. Prasad
+            </h3>
+
+
+            <div class="hod-role">
+                Head of Department, Department of Information Technology
+            </div>
+
+
+            <div class="hod-info-row">
+
+                <div class="hod-info">
+                    ☎
+                    <strong>Contact:</strong>
+                    +91 9423677790
+                </div>
+
+
+                <div class="hod-info">
+                    ✉
+                    <strong>Email:</strong>
+                    prakash.prasad@pce.ac.in
+                </div>
+
+            </div>
+
+
+            <div class="hod-info-row">
+
+                <div class="hod-info">
+                    🎓
+                    <strong>Qualification:</strong>
+                    M.Tech, Ph.D. (Computer Engineering)
+                </div>
+
+
+                <div class="hod-info">
+                    ⏱
+                    <strong>Experience:</strong>
+                    12+ Years
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="tel:+919423677790"
+            class="hod-button">
+
+            Contact HOD →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADDRESS + CONTACT
+===================================================== -->
+
+<section
+    class="contact-grid"
+    id="address">
+
+
+    <!-- COLLEGE ADDRESS -->
+
+    <div class="address-card">
+
+        <h2 class="card-title">
+            College Address
+        </h2>
+
+
+        <div class="address-box">
+
+            Priyadarshini College of Engineering,
+            Digdoh Hills, Hingna Road,
+            Nagpur, Maharashtra, India.
+
+        </div>
+
+
+        <div class="detail-list">
+
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    ◷
+                </div>
+
+                <div>
+
+                    <strong>
+                        Office Hours
+                    </strong>
+
+                    <br>
+
+                    Monday — Saturday |
+                    9:00 AM — 5:00 PM
+
+                </div>
+
+            </div>
+
+
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    ✉
+                </div>
+
+                <div>
+
+                    <strong>
+                        General Email
+                    </strong>
+
+                    <br>
+
+                    contact@pce.ac.in
+
+                </div>
+
+            </div>
+
+
+
+            <div class="detail-item">
+
+                <div class="detail-icon">
+                    ☎
+                </div>
+
+                <div>
+
+                    <strong>
+                        Phone
+                    </strong>
+
+                    <br>
+
+                    +91 9423677790
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- GET IN TOUCH -->
+
+    <div class="contact-card">
+
+        <h3>
+            Get In Touch
+        </h3>
+
+
+        <div class="contact-option">
+
+            <div class="contact-option-icon">
+                ☎
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Call Us
+                </strong>
+
+                <a href="tel:+919423677790">
+                    +91 9423677790
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-option">
+
+            <div class="contact-option-icon">
+                ✉
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Email Us
+                </strong>
+
+                <a href="mailto:contact@pce.ac.in">
+                    contact@pce.ac.in
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="contact-option">
+
+            <div class="contact-option-icon">
+                📍
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Location
+                </strong>
+
+                <span>
+                    Nagpur, Maharashtra, India
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     VISIT SECTION
+===================================================== -->
+
+<section class="visit-section">
+
+    <h2>
+
+        Plan Your
+        <span>Visit</span>
+
+    </h2>
+
+
+    <p>
+
+        Have questions about admissions, academics,
+        placements or the Information Technology department?
+        Our team is happy to help.
+
+    </p>
+
+
+    <a
+        href="#address"
+        class="visit-button">
+
+        View Contact Details →
+
+    </a>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <h3>
+        Priyadarshini College of Engineering
+    </h3>
+
+
+    <span>
+        Department of Information Technology
+    </span>
+
+
+    <p>
+        Nagpur | Learn • Innovate • Build the Future
+    </p>
+
+
+    <p>
+        © 2026 Priyadarshini College of Engineering.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Computer Labs | Priyadarshini College</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef9ff;
+            color: #123f70;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            min-height: 70px;
+
+            background: #063b70;
+
+            display: flex;
+            align-items: center;
+
+            padding: 7px 6%;
+
+            color: white;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+
+            border: 3px solid #19d5e3;
+            border-radius: 14px;
+
+            overflow: hidden;
+
+            margin-right: 13px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+        .college-name {
+            flex: 1;
+        }
+
+        .college-name h1 {
+            font-size: 23px;
+        }
+
+        .college-name span {
+            color: #16c7d8;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: #18d3df;
+        }
+
+        .home-btn {
+            background: #13c5d4;
+
+            padding: 10px 18px;
+
+            border-radius: 7px;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+
+            max-width: 1350px;
+
+            margin: 30px auto;
+
+            min-height: 300px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 42, 79, 0.96),
+                    rgba(3, 62, 105, 0.82),
+                    rgba(3, 62, 105, 0.35)
+                ),
+                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1500&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+
+            color: white;
+
+            padding: 50px;
+
+            max-width: 720px;
+        }
+
+        .hero-content .badge {
+
+            display: inline-block;
+
+            background: #13c5d4;
+
+            padding: 8px 16px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+
+            font-size: 46px;
+
+            line-height: 1.1;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 span {
+            color: #1bd4e0;
+        }
+
+        .hero p {
+
+            font-size: 17px;
+
+            line-height: 1.6;
+
+            color: #e7f8ff;
+        }
+
+
+        /* ================= COMPUTER INFO ================= */
+
+        .computer-info {
+
+            max-width: 1200px;
+
+            margin: 30px auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+
+            padding: 0 20px;
+        }
+
+        .info-box {
+
+            background: white;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .info-icon {
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+        .info-box h3 {
+
+            font-size: 18px;
+
+            margin-bottom: 5px;
+        }
+
+        .info-box p {
+
+            font-size: 13px;
+
+            color: #71849a;
+        }
+
+
+        /* ================= TITLE ================= */
+
+        .section {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 25px 20px;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+        .section-title span {
+            color: #0db5c7;
+        }
+
+        .subtitle {
+
+            text-align: center;
+
+            color: #6b8198;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ================= LAB CARDS ================= */
+
+        .lab-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .lab-card {
+
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+
+            border: 1px solid #e1f1f6;
+        }
+
+        .lab-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+
+        /* Computer image area */
+
+        .lab-image {
+
+            height: 180px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(5, 54, 94, 0.65),
+                    rgba(8, 132, 154, 0.55)
+                ),
+                url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80");
+
+            background-size: cover;
+
+            background-position: center;
+        }
+
+
+        /* Computer illustration */
+
+        .computer {
+
+            width: 145px;
+            height: 95px;
+
+            background: #e9f7fb;
+
+            border: 7px solid #123f70;
+
+            border-radius: 7px;
+
+            position: relative;
+
+            box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+        }
+
+        .computer::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 40px;
+            height: 12px;
+
+            background: #123f70;
+
+            bottom: -22px;
+            left: 45px;
+
+            border-radius: 3px;
+        }
+
+        .computer::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 75px;
+            height: 7px;
+
+            background: #123f70;
+
+            bottom: -28px;
+            left: 28px;
+
+            border-radius: 5px;
+        }
+
+
+        .screen {
+
+            width: 100%;
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #19d5e3,
+                    #0868a0
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            font-size: 30px;
+        }
+
+
+        /* ================= CARD CONTENT ================= */
+
+        .lab-content {
+
+            padding: 22px;
+        }
+
+        .lab-number {
+
+            color: #0db5c7;
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+            margin-bottom: 6px;
+        }
+
+        .lab-content h3 {
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+        .lab-content p {
+
+            color: #667e96;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ================= TAGS ================= */
+
+        .tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
+        .tag {
+
+            padding: 6px 10px;
+
+            border-radius: 15px;
+
+            background: #e4f8fb;
+
+            color: #078da0;
+
+            font-size: 11px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= EQUIPMENT ================= */
+
+        .equipment {
+
+            max-width: 1200px;
+
+            margin: 25px auto 45px;
+
+            background: #063b70;
+
+            border-radius: 15px;
+
+            padding: 30px;
+
+            color: white;
+        }
+
+        .equipment h2 {
+
+            text-align: center;
+
+            margin-bottom: 25px;
+        }
+
+        .equipment-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .equipment-item {
+
+            background: rgba(255,255,255,0.09);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            border-radius: 10px;
+
+            padding: 18px;
+
+            text-align: center;
+        }
+
+        .equipment-item .emoji {
+
+            font-size: 30px;
+
+            margin-bottom: 8px;
+        }
+
+        .equipment-item h4 {
+
+            font-size: 15px;
+
+            margin-bottom: 4px;
+        }
+
+        .equipment-item p {
+
+            font-size: 12px;
+
+            color: #b9dce9;
+        }
+
+
+        /* ================= PRACTICAL ================= */
+
+        .practical {
+
+            max-width: 1200px;
+
+            margin: 0 auto 50px;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+        .practical h2 {
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .practical p {
+
+            color: #687f96;
+
+            line-height: 1.6;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 1000px) {
+
+            .nav {
+                gap: 14px;
+            }
+
+            .computer-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .lab-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        @media(max-width: 700px) {
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .nav {
+
+                width: 100%;
+
+                overflow-x: auto;
+
+                margin-top: 10px;
+
+                padding-bottom: 5px;
+            }
+
+            .hero {
+                margin: 15px;
+
+                min-height: 350px;
+            }
+
+            .hero-content {
+                padding: 30px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .computer-info {
+                grid-template-columns: 1fr;
+            }
+
+            .equipment-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <img src="/college-logo.png"
+             alt="College Logo">
+
+    </div>
+
+
+    <div class="college-name">
+
+        <h1>
+            Priyadarshini College of Engineering
+        </h1>
+
+        <span>
+            Nagpur
+        </span>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/labs">
+            Labs
+        </a>
+
+        <a href="/">
+            Courses
+        </a>
+
+        <a href="/">
+            Faculty
+        </a>
+
+        <a href="/">
+            Placements
+        </a>
+
+        <a href="/">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= COMPUTER LAB HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            💻 INFORMATION TECHNOLOGY DEPARTMENT
+        </span>
+
+        <h2>
+            Explore Our
+            <span>Computer Labs</span>
+        </h2>
+
+        <p>
+            Experience practical learning through modern
+            computer laboratories where students code,
+            experiment, develop applications and transform
+            ideas into real-world solutions.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LAB FACILITIES ================= -->
+
+<div class="computer-info">
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            🖥️
+        </div>
+
+        <h3>
+            Computer Systems
+        </h3>
+
+        <p>
+            Modern systems for practical programming
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            🌐
+        </div>
+
+        <h3>
+            High-Speed Network
+        </h3>
+
+        <p>
+            Connected learning environment
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            💾
+        </div>
+
+        <h3>
+            Software Tools
+        </h3>
+
+        <p>
+            Programming and development software
+        </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            👨‍💻
+        </div>
+
+        <h3>
+            Practical Learning
+        </h3>
+
+        <p>
+            Hands-on experience for students
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= LAB SECTION ================= -->
+
+<section class="section">
+
+    <h2 class="section-title">
+
+        Our <span>IT Laboratories</span>
+
+    </h2>
+
+    <p class="subtitle">
+
+        Three practical environments for developing
+        programming and technology skills
+
+    </p>
+
+
+    <div class="lab-grid">
+
+
+        <!-- ================= FCIP ================= -->
+
+        <div class="lab-card">
+
+            <div class="lab-image">
+
+                <div class="computer">
+
+                    <div class="screen">
+                        &lt;/&gt;
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="lab-content">
+
+                <div class="lab-number">
+                    COMPUTER LAB 01
+                </div>
+
+                <h3>
+                    FCIP Lab
+                </h3>
+
+                <p>
+                    A foundation computer programming
+                    environment where students develop
+                    programming logic and understand
+                    fundamental computer concepts.
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Programming
+                    </span>
+
+                    <span class="tag">
+                        C / C++
+                    </span>
+
+                    <span class="tag">
+                        Logic Building
+                    </span>
+
+                    <span class="tag">
+                        Problem Solving
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= DATA STRUCTURE ================= -->
+
+        <div class="lab-card">
+
+            <div class="lab-image">
+
+                <div class="computer">
+
+                    <div class="screen">
+                        🌳
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="lab-content">
+
+                <div class="lab-number">
+                    COMPUTER LAB 02
+                </div>
+
+                <h3>
+                    Data Structure Lab
+                </h3>
+
+                <p>
+                    A programming-focused laboratory where
+                    students implement data structures and
+                    algorithms and learn efficient approaches
+                    to solving computational problems.
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Arrays
+                    </span>
+
+                    <span class="tag">
+                        Linked List
+                    </span>
+
+                    <span class="tag">
+                        Stack
+                    </span>
+
+                    <span class="tag">
+                        Queue
+                    </span>
+
+                    <span class="tag">
+                        Trees
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= WEB TECHNOLOGY ================= -->
+
+        <div class="lab-card">
+
+            <div class="lab-image">
+
+                <div class="computer">
+
+                    <div class="screen">
+                        🌐
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="lab-content">
+
+                <div class="lab-number">
+                    COMPUTER LAB 03
+                </div>
+
+                <h3>
+                    Web Technology Lab
+                </h3>
+
+                <p>
+                    A creative computer laboratory for
+                    designing websites and developing
+                    interactive web applications using
+                    modern web technologies.
+                </p>
+
+
+                <div class="tags">
+
+                    <span class="tag">
+                        HTML
+                    </span>
+
+                    <span class="tag">
+                        CSS
+                    </span>
+
+                    <span class="tag">
+                        JavaScript
+                    </span>
+
+                    <span class="tag">
+                        PHP
+                    </span>
+
+                    <span class="tag">
+                        MySQL
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= EQUIPMENT ================= -->
+
+<section class="equipment">
+
+    <h2>
+        🖥️ Computer Lab Environment
+    </h2>
+
+
+    <div class="equipment-grid">
+
+
+        <div class="equipment-item">
+
+            <div class="emoji">
+                🖥️
+            </div>
+
+            <h4>
+                Desktop Computers
+            </h4>
+
+            <p>
+                Systems for programming and practical work
+            </p>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="emoji">
+                ⌨️
+            </div>
+
+            <h4>
+                Keyboard & Mouse
+            </h4>
+
+            <p>
+                Complete computer workstation setup
+            </p>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="emoji">
+                🌐
+            </div>
+
+            <h4>
+                Networking
+            </h4>
+
+            <p>
+                Network-connected laboratory environment
+            </p>
+
+        </div>
+
+
+        <div class="equipment-item">
+
+            <div class="emoji">
+                💻
+            </div>
+
+            <h4>
+                Development Tools
+            </h4>
+
+            <p>
+                Software tools for coding and development
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRACTICAL LEARNING ================= -->
+
+<section class="practical">
+
+    <h2>
+        👨‍💻 Learn by <span style="color:#0db5c7;">
+        Building</span>
+    </h2>
+
+    <p>
+
+        Students use these computer laboratories to write
+        programs, implement algorithms, design web pages,
+        test applications and gain practical experience
+        alongside their academic learning.
+
+    </p>
+
+</section>
+
+
+
+</body>
+
+</html>

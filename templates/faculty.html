@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Faculty | IT Department | Priyadarshini College of Engineering
+    </title>
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        nav {
+            background: #0f172a;
+            padding: 16px 7%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .brand {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #38bdf8;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 380px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e3a8a
+                );
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 60px 8%;
+
+            color: white;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .hero-text span {
+            color: #38bdf8;
+
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin: 12px 0;
+
+            line-height: 1.15;
+        }
+
+        .hero-text p {
+            color: #dbeafe;
+
+            font-size: 17px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            width: 390px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 35px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+        ===================================================== */
+
+        .section {
+            width: 88%;
+            max-width: 1200px;
+
+            margin: 70px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #2563eb;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+
+            margin-top: 7px;
+
+            color: #0f172a;
+        }
+
+        .section-title p {
+            color: #64748b;
+
+            margin-top: 10px;
+        }
+
+
+        /* =====================================================
+           HOD SECTION
+        ===================================================== */
+
+        .hod {
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 40px;
+
+            display: grid;
+
+            grid-template-columns: 250px 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 12px 35px rgba(15, 23, 42, 0.08);
+        }
+
+
+        /* HOD H SYMBOL */
+
+        .hod-symbol-wrapper {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hod-symbol {
+            width: 210px;
+            height: 210px;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #1e3a8a
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 100px;
+
+            font-weight: 800;
+
+            border: 8px solid white;
+
+            outline: 5px solid #dbeafe;
+
+            box-shadow:
+                0 15px 35px rgba(37, 99, 235, 0.25);
+        }
+
+
+        /* HOD CONTENT */
+
+        .hod-content {
+            padding: 5px 0;
+        }
+
+        .hod-label {
+            display: inline-block;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            padding: 7px 14px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+        .hod-content h3 {
+            color: #0f172a;
+
+            font-size: 32px;
+
+            margin-bottom: 5px;
+        }
+
+        .hod-designation {
+            color: #2563eb;
+
+            font-weight: 700;
+
+            font-size: 16px;
+
+            margin-bottom: 18px;
+        }
+
+        .hod-content p {
+            color: #475569;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            margin-bottom: 12px;
+        }
+
+        .hod-tag {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 9px 16px;
+
+            background: #0f172a;
+
+            color: white;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FACULTY GRID
+        ===================================================== */
+
+        .faculty-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .faculty-card {
+            background: white;
+
+            padding: 28px;
+
+            border-radius: 18px;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 8px 25px rgba(15, 23, 42, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.12);
+        }
+
+
+        /* FACULTY INITIAL SYMBOL */
+
+        .faculty-icon {
+            width: 65px;
+            height: 65px;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #dbeafe
+                );
+
+            color: #2563eb;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid #bfdbfe;
+        }
+
+        .faculty-card h3 {
+            font-size: 20px;
+
+            color: #0f172a;
+
+            margin-bottom: 7px;
+        }
+
+        .faculty-card .subject {
+            color: #2563eb;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+        .faculty-card p {
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           FACULTY AT A GLANCE
+        ===================================================== */
+
+        .glance {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .glance-box {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border: 1px solid #e2e8f0;
+
+            box-shadow:
+                0 7px 22px rgba(15, 23, 42, 0.06);
+        }
+
+        .glance-box .number {
+            color: #2563eb;
+
+            font-size: 34px;
+
+            font-weight: 800;
+        }
+
+        .glance-box p {
+            color: #64748b;
+
+            margin-top: 5px;
+        }
+
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .quote {
+            background: #0f172a;
+
+            color: white;
+
+            padding: 55px 8%;
+
+            text-align: center;
+
+            margin-top: 70px;
+        }
+
+        .quote p {
+            font-size: 25px;
+
+            max-width: 850px;
+
+            margin: auto;
+
+            font-style: italic;
+
+            color: #e2e8f0;
+        }
+
+        .quote span {
+            display: block;
+
+            margin-top: 18px;
+
+            color: #38bdf8;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #020617;
+
+            color: #94a3b8;
+
+            padding: 50px 8% 25px;
+        }
+
+        .footer-content {
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap: 40px;
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+        .footer-left h3 {
+            color: white;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-left p {
+            max-width: 500px;
+        }
+
+        .footer-middle h4,
+        .footer-right h4 {
+            color: white;
+
+            margin-bottom: 14px;
+        }
+
+        .footer-middle p,
+        .footer-right p {
+            margin-bottom: 7px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+
+            margin-top: 35px;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE - TABLET
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .faculty-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .glance {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE - MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 45px 5%;
+            }
+
+            .hero-image {
+                width: 100%;
+
+                height: 220px;
+            }
+
+            .section {
+                width: 92%;
+            }
+
+
+            /* MOBILE HOD */
+
+            .hod {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding: 30px 20px;
+
+                gap: 25px;
+            }
+
+            .hod-symbol {
+                width: 180px;
+                height: 180px;
+
+                font-size: 85px;
+            }
+
+
+            /* MOBILE FACULTY */
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .glance {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+            .quote p {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <nav>
+
+        <a href="/" class="brand">
+            IT Department
+        </a>
+
+        <div class="nav-links">
+
+            <a href="/">
+                Home
+            </a>
+
+            <a href="/labs">
+                Labs
+            </a>
+
+            <a href="/faculty" class="active">
+                Faculty
+            </a>
+
+            <a href="/courses">
+                Courses
+            </a>
+
+            <a href="/placement">
+                Placements
+            </a>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span>
+                INFORMATION TECHNOLOGY DEPARTMENT
+            </span>
+
+            <h1>
+                Meet Our Faculty
+            </h1>
+
+            <p>
+                Our experienced faculty members are committed
+                to providing quality education, technical
+                knowledge, professional skills and guidance
+                to students.
+            </p>
+
+        </div>
+
+
+        <img
+            src="/college-image"
+            alt="Priyadarshini College of Engineering"
+            class="hero-image"
+        >
+
+    </section>
+
+
+    <!-- =====================================================
+         HOD SECTION
+    ===================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Department Leadership
+            </span>
+
+            <h2>
+                Head of Department
+            </h2>
+
+            <p>
+                Leading the Information Technology department
+                towards academic and professional excellence.
+            </p>
+
+        </div>
+
+
+        <div class="hod">
+
+            <!-- HOD SYMBOL -->
+
+            <div class="hod-symbol-wrapper">
+
+                <div
+                    class="hod-symbol"
+                    title="Head of Department"
+                >
+                    H
+                </div>
+
+            </div>
+
+
+            <!-- HOD INFORMATION -->
+
+            <div class="hod-content">
+
+                <span class="hod-label">
+                    HEAD OF DEPARTMENT
+                </span>
+
+                <h3>
+                    Dr. Prakash S. Prasad
+                </h3>
+
+                <div class="hod-designation">
+                    Head of Department — Information Technology
+                </div>
+
+                <p>
+                    Dr. Prakash S. Prasad leads the Information
+                    Technology department with a focus on
+                    academic excellence, innovation and
+                    professional development.
+                </p>
+
+                <p>
+                    The department encourages students to
+                    develop strong technical knowledge,
+                    problem-solving skills and
+                    industry-oriented capabilities.
+                </p>
+
+                <span class="hod-tag">
+                    Information Technology Department
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FACULTY MEMBERS
+    ===================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Our Team
+            </span>
+
+            <h2>
+                Faculty Members
+            </h2>
+
+            <p>
+                Dedicated educators guiding students across
+                different areas of Information Technology.
+            </p>
+
+        </div>
+
+
+        <div class="faculty-grid">
+
+
+            <!-- LALITA CHARPE -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    LC
+                </div>
+
+                <h3>
+                    Lalita Charpe
+                </h3>
+
+                <div class="subject">
+                    FCIP
+                </div>
+
+                <p>
+                    Faculty member associated with FCIP and
+                    student academic development.
+                </p>
+
+            </div>
+
+
+            <!-- P. N. FALE -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    PF
+                </div>
+
+                <h3>
+                    P. N. Fale
+                </h3>
+
+                <div class="subject">
+                    Data Structure
+                </div>
+
+                <p>
+                    Faculty member teaching data structures
+                    and fundamental programming concepts.
+                </p>
+
+            </div>
+
+
+            <!-- AJINKYA GUJARKAR -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    AG
+                </div>
+
+                <h3>
+                    Ajinkya Gujarkar
+                </h3>
+
+                <div class="subject">
+                    Web Technology
+                </div>
+
+                <p>
+                    Faculty member guiding students in web
+                    technologies and modern web development.
+                </p>
+
+            </div>
+
+
+            <!-- RENYUKA KULAT -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    RK
+                </div>
+
+                <h3>
+                    Renyuka Kulat
+                </h3>
+
+                <div class="subject">
+                    Computer Architecture
+                </div>
+
+                <p>
+                    Faculty member teaching computer architecture
+                    and system-level concepts.
+                </p>
+
+            </div>
+
+
+            <!-- ASHWINI MUDE -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    AM
+                </div>
+
+                <h3>
+                    Ashwini Mude
+                </h3>
+
+                <div class="subject">
+                    Probability and Statistics (PTS)
+                </div>
+
+                <p>
+                    Faculty member helping students understand
+                    probability, statistics and analytical concepts.
+                </p>
+
+            </div>
+
+
+            <!-- PRACHI MESHRAM -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    PM
+                </div>
+
+                <h3>
+                    Prachi Meshram
+                </h3>
+
+                <div class="subject">
+                    Digital Economy and Management
+                </div>
+
+                <p>
+                    Faculty member teaching concepts related to
+                    digital economy and management.
+                </p>
+
+            </div>
+
+
+            <!-- DR. ROMAN JANBANDHU -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    RJ
+                </div>
+
+                <h3>
+                    Dr. Roman Janbandhu
+                </h3>
+
+                <div class="subject">
+                    Professional Communication
+                </div>
+
+                <p>
+                    Faculty member developing students'
+                    communication and professional skills.
+                </p>
+
+            </div>
+
+
+            <!-- OPEN ELECTIVE -->
+
+            <div class="faculty-card">
+
+                <div class="faculty-icon">
+                    OE
+                </div>
+
+                <h3>
+                    Open Elective
+                </h3>
+
+                <div class="subject">
+                    Open Elective
+                </div>
+
+                <p>
+                    Flexible academic learning through
+                    interdisciplinary elective courses.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FACULTY AT A GLANCE
+    ===================================================== -->
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <span>
+                Department Overview
+            </span>
+
+            <h2>
+                Faculty at a Glance
+            </h2>
+
+        </div>
+
+
+        <div class="glance">
+
+            <div class="glance-box">
+
+                <div class="number">
+                    8+
+                </div>
+
+                <p>
+                    Faculty Members
+                </p>
+
+            </div>
+
+
+            <div class="glance-box">
+
+                <div class="number">
+                    7+
+                </div>
+
+                <p>
+                    Core Subjects
+                </p>
+
+            </div>
+
+
+            <div class="glance-box">
+
+                <div class="number">
+                    1
+                </div>
+
+                <p>
+                    Department HOD
+                </p>
+
+            </div>
+
+
+            <div class="glance-box">
+
+                <div class="number">
+                    100%
+                </div>
+
+                <p>
+                    Student Focus
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUOTE
+    ===================================================== -->
+
+    <section class="quote">
+
+        <p>
+            "Education is the foundation of innovation,
+            and our faculty inspires students to build
+            the future through technology."
+        </p>
+
+        <span>
+            — Information Technology Department
+        </span>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div class="footer-left">
+
+                <h3>
+                    Information Technology Department
+                </h3>
+
+                <p>
+                    Priyadarshini College of Engineering
+                </p>
+
+                <p>
+                    Nagpur, Maharashtra
+                </p>
+
+            </div>
+
+
+            <div class="footer-middle">
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <p>
+                    Home
+                </p>
+
+                <p>
+                    Labs
+                </p>
+
+                <p>
+                    Faculty
+                </p>
+
+                <p>
+                    Courses
+                </p>
+
+            </div>
+
+
+            <div class="footer-right">
+
+                <h4>
+                    Department
+                </h4>
+
+                <p>
+                    Technology
+                </p>
+
+                <p>
+                    Innovation
+                </p>
+
+                <p>
+                    Excellence
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Priyadarshini College of Engineering
+            | Information Technology Department
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
